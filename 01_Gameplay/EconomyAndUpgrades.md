@@ -13,7 +13,6 @@ Oyuncu, zombi dalgalarını yendikçe **para ve kaynak kazanır**. Bu kaynaklar,
 - **Para Kazanma:** Zombileri öldürmek ve görevleri tamamlamak  
 - **Harcanabilir Kaynaklar:** Taretler, barikatlar, silahlar ve karakter upgrades  
 - **Upgrade Mekanikleri:** 
-  - Silah ve taret özellikleri (damage, fire rate, menzil)  
   - Oyuncu karakter özellikleri:  
     - Movement Speed (Hareket Hızı)  
     - Reloading Speed (Silah Yenileme Hızı)  
@@ -25,11 +24,6 @@ Oyuncu, zombi dalgalarını yendikçe **para ve kaynak kazanır**. Bu kaynaklar,
 ---
 
 ## 🔄 Mekanik Detaylar
-
-- **Taret ve Silah Upgrade:**  
-  - Damage, Fire Rate, Range gibi değerler seviyeye bağlı olarak artar  
-  - Örnek: Damage +20%, Fire Rate +15%, Range +1 birim  
-
 - **Karakter Özellikleri Upgrade:**  
   - Level arttıkça yukarıdaki özellikler kademeli olarak yükselir  
   - Bu sayede oyuncu dalga ilerledikçe daha güçlü ve hayatta kalabilir hale gelir  
