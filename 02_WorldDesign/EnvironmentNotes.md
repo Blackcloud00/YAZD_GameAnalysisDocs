@@ -1,31 +1,43 @@
-# 🗺️ Level Structure — Oyun Alanı Yapısı
+# 🌳 Environment Notes — Çevresel Tasarım
 
 **Oyun:** Yet Another Zombie Defense  
-**Kategori:** WorldDesign → Level Structure  
-**Amaç:** Minimalist oyun alanının yapısını, oyuncu ve düşman spawn noktalarını ve dalga ilerleyişini detaylandırmak.
+**Kategori:** WorldDesign → Environment Notes  
+**Amaç:** Minimalist oyun alanının çevresel öğelerini, stratejik objeleri ve oyuncu deneyimini detaylandırmak.
 
 ---
 
 ## 🌌 Oyun Alanı Konsepti
 
-- **Boş Alan:** Oyun, tek bir açık alanda geçer; çevrede binalar veya ekstra objeler yoktur.  
-- **Sokak Lambası:** Alanın ortasında tek bir ışık kaynağı vardır; hem görsel odak hem de oyuncu stratejisi için referans noktasıdır.  
-- **Sınırlar:** Oyuncu ve düşmanlar alanın belirli sınırları içinde hareket eder. Çarpışma ile alanın dışına çıkmak engellenir.  
+- **Boş Alan:** Oyun alanı neredeyse tamamen boş; oyuncunun hareketi ve stratejik yerleşimler ön planda.  
+- **Sokak Lambası:** Alanın merkezinde tek bir ışık kaynağı; hem oyuncuya yön verir hem de düşman ve barikat yerleşimi için referans noktasıdır.  
+- **Zemin:** Tek tip zemin mesh veya plane; basit materyal, oyuncu ve düşman kontrastını artırır.
 
 ---
 
-## 🔄 Mekanik Detaylar
+## 🛠️ Stratejik Objeler
 
-- **Spawn Noktaları:**  
-  - Düşmanlar alanın kenarlarından veya belirlenmiş spawn noktalarından çıkar.  
-  - Oyuncuya yakın spawn engellenir.  
-- **Dalga İlerleyişi:**  
-  - Her dalga, bir önceki dalgadan daha fazla veya daha güçlü zombiler içerir.  
-  - Dalga arası kısa hazırlık süresi oyuncuya strateji kurma şansı verir.  
-- **Player Start:**  
-  - Oyuncu, lambanın yakınında başlar ve barikat/taret yerleştirmeleri yapacak şekilde alanı kullanır.  
-- **Interactable Objects:**  
-  - Tek alan içindeki objeler: barikatlar, taretler, pickup itemler  
+- **Barikatlar:**  
+  - Oyuncu tarafından yerleştirilebilir  
+  - Düşmanları yavaşlatmak veya yönlendirmek için kullanılır  
+  - Alanın sınırlarına veya lambaya yakın stratejik konumlandırma önerilir  
+
+- **Taretler:**  
+  - Otomatik ateş eden savunma birimleri  
+  - Lambaya veya barikatın arkasına yerleştirilebilir  
+  - Spawn noktalarına göre oyuncuya avantaj sağlayacak şekilde konumlanır  
+
+- **Pickup Itemler:**  
+  - Sağlık kitleri veya ek kaynaklar  
+  - Alanın çeşitli noktalarına rastgele veya sabit olarak yerleştirilebilir  
+
+---
+
+## 💡 Tasarım Notları
+
+- Minimalist alan, oyuncunun strateji geliştirmesini ve hareket alanını ön plana çıkarır.  
+- Sokak lambası, görsel odak ve güvenli alan referansı sağlar.  
+- Barikat ve taretler, dalgaların ilerleyişine göre stratejik olarak yerleştirilmeli.  
+- Zemin ve çevresel objeler, düşman ve oyuncu konumunu kolayca ayırt edilebilir kılmalı.  
 
 ---
 
@@ -33,25 +45,15 @@
 
 | Mekanik | Unreal Engine 5 Uygulaması |
 |---------|---------------------------|
-| Oyun Alanı | Tek Level Blueprint veya Persistent Level → sınırlar ve tek alan setup |
-| Player Spawn | PlayerStart Actor → lambanın yakınında konumlandırma |
-| Enemy Spawn | Array of Spawn Points → Random Selection + `SpawnActor` |
-| Dalga Yönetimi | WaveController Blueprint → Dalga sayısı, spawn miktarı ve zorluk skalası |
-| Sınırlar / Collision | Blocking Volume → oyuncu ve düşmanların alan dışına çıkmasını engelleme |
-| Minimal Visuals | Sokak lambası için Point Light / Spot Light + basit zemin mesh |
-
----
-
-## 💡 Geliştirme Notları
-
-- Minimalist tasarım, odak noktayı oyuncu ve dalga yönetimine yönlendirir.  
-- Sokak lambası, hem görsel çekicilik hem de stratejik referans sağlar.  
-- Tek alan olması, performans optimizasyonu açısından avantajlıdır; dinamik ışık ve spawn yönetimi daha kolaydır.  
-- Multiplayer için spawn noktaları ve dalga yönetimi server tarafında kontrol edilmelidir.
+| Sokak Lambası | `SpotLight` veya `PointLight` → Dinamik gölgeler, ışık renk ve yoğunluğu ayarlanabilir |
+| Barikat | Blueprint Actor → Collision ve Health Component ile tahrip edilebilir objeler |
+| Taret | Blueprint Actor → Fire Rate, Damage, Targeting Component |
+| Pickup | Blueprint Actor → Sphere Collision + OnOverlap → Inventory veya Stat Update |
+| Minimal Zemin | Static Mesh veya Plane + Basit Material → Navigation Mesh için uygun |
 
 ---
 
 ## 📌 Özet
 
-> LevelStructure.md, minimalist oyun alanını, oyuncu ve düşman spawn noktalarını ve dalga ilerleyişini detaylandırır.  
-> Unreal Engine 5’te Persistent Level, PlayerStart ve Blueprint tabanlı WaveController ile prototiplenebilir, optimize edilebilir ve multiplayer modlarıyla uyumlu hale getirilebilir.
+> EnvironmentNotes.md, minimalist oyun alanının çevresel tasarımını ve stratejik objelerin yerleşimini detaylandırır.  
+> Unreal Engine 5’te Blueprint tabanlı barikat, taret ve pickup sistemleri ile prototiplenebilir, ışıklandırma ve zemin materyalleri ile atmosfer optimize edilebilir.
