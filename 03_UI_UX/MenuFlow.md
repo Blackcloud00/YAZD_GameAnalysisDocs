@@ -67,8 +67,12 @@
 ## 📌 Referans Menu Akış Görselleri
 
 ![Ana Menü](Images/MainMenu.png)
+- Main Menu  
 ![Ana Menü → Oyna](Images/MainMenu-Play.png)
+- Main Menu → Play
 ![Ana Menü → Oyna → Defense](Images/MainMenu-Play-Defense.png)
+- Main Menu → Play → Defense
 ![Ana Menü → Oyna → Defense → Guy](Images/MainMenu-Play-Defense-Guy.png)
+- Main Menu → Play → Defense → Guy
 
 
