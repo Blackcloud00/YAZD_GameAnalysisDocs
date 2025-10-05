@@ -12,7 +12,7 @@ Oyuncu, **zombi dalgalarına karşı çeşitli silahlar ve otomatik taretler** k
 
 - **El Silahları:** Tabanca, shotgun, SMG  
 - **Taretler:** Otomatik ateş eden savunma birimleri  
-- **Melee / Yakın Dövüş (varsa):** Kısa menzilli saldırılar  
+- **Melee / Yakın Dövüş:** Motorlu Testere, Kılıç  
 - **Düşman Tipleri:** Yavaş, hızlı, tank gibi farklı zombi türleri  
 - **PvP Modu:** Diğer oyunculara karşı hasar sistemi
 
@@ -55,3 +55,4 @@ Oyuncu, **zombi dalgalarına karşı çeşitli silahlar ve otomatik taretler** k
 
 > Combat.md, oyuncunun ve düşmanların etkileşimlerini, silah ve taret mekaniklerini detaylandırır.  
 > UE5’te Blueprint ve sistem bileşenleriyle prototiplenebilir, geliştirilebilir ve multiplayer modlarıyla uyumlu hale getirilebilir.
+
