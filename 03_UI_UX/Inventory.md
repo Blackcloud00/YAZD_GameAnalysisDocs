@@ -6,7 +6,7 @@
 
 ---
 
-## 🌌 Inventory Konsepti
+## 🌌 Inventory Konsepti (gizli inventory, back inventory)
 
 - **Minimalist ve hızlı erişilebilir:** Oyuncu tek alan ve tek ışık kaynağı ile oynadığından, inventory ekranı oyun akışını kesmeden hızlı erişim sunmalı.  
 - **Odak Noktası:** Silah, taret ve barikat seçimleri; pickup itemleri ve kaynak durumu.  
@@ -58,3 +58,4 @@
 
 > Inventory.md, oyuncunun sahip olduğu silahlar, taretler, barikatlar ve pickup itemlerini görüntüleyip yönetebileceği minimalist ve hızlı erişilebilir envanter sistemini detaylandırır.  
 > Unreal Engine 5’te UMG Widget Blueprint, Bindings ve Event Dispatcher kullanımıyla prototiplenebilir ve dinamik hale getirilebilir.
+
